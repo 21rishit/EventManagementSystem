@@ -13,6 +13,15 @@ export const createTicket = async (req, res) => {
    }
 };
 
+// export const getUserTickets = async (req, res) => {
+//    try {
+//       const tickets = await Ticket.find({ userId: req.params.userId });
+//       res.json(tickets);
+//    } catch (error) {
+//       res.status(500).json({ error: "Failed to fetch tickets" });
+//    }
+// };
+
 // Get all tickets
 export const getAllTickets = async (req, res) => {
    try {

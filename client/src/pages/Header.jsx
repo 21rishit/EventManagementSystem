@@ -5,7 +5,6 @@ import { UserContext } from "../UserContext";
 import { RxExit } from 'react-icons/rx';
 import { BsFillCaretDownFill } from 'react-icons/bs';
 
-
 export default function Header() {
   const {user,setUser} = useContext(UserContext);
   const [isMenuOpen, setisMenuOpen] = useState(false);
@@ -16,13 +15,12 @@ export default function Header() {
   //! Fetch events from the server -------------------------------------------------
   useEffect(() => {
     
-    axios.get("/events").then((response) => {
+    axios.get("events/allEvent").then((response) => {
       setEvents(response.data);
     }).catch((error) => {
       console.error("Error fetching events:", error);
     });
   }, []);
-
 
   //! Search bar functionality----------------------------------------------------
   useEffect(() => {
@@ -43,7 +41,7 @@ export default function Header() {
   
   //! Logout Function --------------------------------------------------------
   async function logout(){
-    await axios.post('/logout');
+    await axios.post('auth/logout');
     setUser(null);
   }
 //! Search input ----------------------------------------------------------------

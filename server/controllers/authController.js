@@ -66,6 +66,8 @@ export const logout = (req, res) => {
    res.cookie("token", "").json({ message: "Logged out" });
 };
 
-export const profile = (req, res) => {
-   res.json(req.user);
+export const profile = async (req, res) => {
+   const { id } = req.user;
+   const user = await User.findById(id).select("-password");
+   res.json(user);
 };

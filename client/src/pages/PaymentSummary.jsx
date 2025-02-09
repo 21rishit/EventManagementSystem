@@ -44,7 +44,7 @@ export default function PaymentSummary() {
       if(!id){
         return;
       }
-      axios.get(`/event/${id}/ordersummary/paymentsummary`).then(response => {
+      axios.get(`events/${id}/ordersummary/paymentsummary`).then(response => {
         setEvent(response.data)
 
         setTicketDetails(prevTicketDetails => ({
@@ -210,7 +210,7 @@ if (redirect){
             <input
               type="text"
               name="nameOnCard"
-              value= "A.B.S.L. Perera"                       
+              value= "Rishitosh Piyush"                       
               onChange={handleChangePayment}
               placeholder="Name on Card"
               className="input-field w-80 ml-10 h-10 bg-gray-50 border border-gray-30  rounded-sm p-2.5"
@@ -228,7 +228,7 @@ if (redirect){
               <input
                 type="text"
                 name="expiryDate"
-                value="12/25"
+                value="12/30"
                 onChange={handleChangePayment}
                 placeholder="Expiry Date (MM/YY)"
                 className="input-field w-60 ml-10 h-10 bg-gray-50 border border-gray-30  rounded-sm p-2.5"
@@ -246,7 +246,7 @@ if (redirect){
               />
             </div>
             <div className="float-right">
-            <p className="text-sm font-semibold pb-2 pt-8">Total : LKR. {event.ticketPrice}</p>
+            <p className="text-sm font-semibold pb-2 pt-8">Total : INR. {event.ticketPrice}</p>
             <Link to={'/'}>
               <button type="button" 
                 onClick = {createTicket}
@@ -270,7 +270,7 @@ if (redirect){
             <p className="text-xs">{event.eventDate.split("T")[0]},</p>
             <p className="text-xs pb-2"> {event.eventTime}</p>
             <hr className=" my-2 border-t pt-2 border-gray-400" />
-            <p className="float-right font-bold">LKR. {event.ticketPrice}</p>
+            <p className="float-right font-bold">INR. {event.ticketPrice}</p>
             <p className="font-bold">Sub total: {event.ticketPrice}</p>
           </div>
           

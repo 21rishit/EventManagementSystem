@@ -27,25 +27,22 @@ function App() {
     <UserContextProvider>
       <Routes>
         {/* Main Layout Routes */}
-        <Route path="/" element={<Layout />}>
+        <Route path="/" element={<Layout />}> {/* done    */}
           <Route index element={<IndexPage />} />
           <Route path="/useraccount" element={<UserAccountPage />} />
-          <Route path="/createEvent" element={<AddEvent />} />
-          <Route path="/event/:id" element={<EventPage />} />
-          <Route path="/calendar" element={<CalendarView />} />
+          <Route path="/createEvent" element={<AddEvent />} /> {/* done    */}
+          <Route path="/event/:id" element={<EventPage />} /> {/* done    */}
+          <Route path="/calendar" element={<CalendarView />} /> {/* done    */}
           <Route path="/wallet" element={<TicketPage />} />
-          <Route path="/event/:id/ordersummary" element={<OrderSummary />} />
+          <Route path="/event/:id/ordersummary" element={<OrderSummary />} /> {/* done    */}
         </Route>
 
+        <Route path="/event/:id/ordersummary/paymentsummary" element={<PaymentSummary />} /> {/* done    */}
         {/* Auth Routes */}
-        <Route path="/register" element={<RegisterPage />} />
-        <Route path="/login" element={<LoginPage />} />
+        <Route path="/register" element={<RegisterPage />} /> {/* done    */}
+        <Route path="/login" element={<LoginPage />} /> {/* done    */}
         <Route path="/forgotpassword" element={<ForgotPassword />} />
         <Route path="/resetpassword" element={<ResetPassword />} />
-        <Route
-          path="/event/:id/ordersummary/paymentsummary"
-          element={<PaymentSummary />}
-        />
       </Routes>
     </UserContextProvider>
   );
