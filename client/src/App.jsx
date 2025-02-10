@@ -33,7 +33,7 @@ function App() {
           <Route path="/createEvent" element={<AddEvent />} /> {/* done    */}
           <Route path="/event/:id" element={<EventPage />} /> {/* done    */}
           <Route path="/calendar" element={<CalendarView />} /> {/* done    */}
-          <Route path="/wallet" element={<TicketPage />} />
+          <Route path="/tickets" element={<TicketPage />} />
           <Route path="/event/:id/ordersummary" element={<OrderSummary />} /> {/* done    */}
         </Route>
 

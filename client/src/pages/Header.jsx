@@ -101,12 +101,12 @@ export default function Header() {
           </Link>
 
           <div className='hidden lg:flex gap-5 text-sm'>
-          <Link to={'/wallet'}> {/*TODO:Route wallet page after creating it */}
+          <Link to={'/tickets'}> {/*TODO:Route tickets page after creating it */}
             <div className='flex flex-col place-items-center py-1 px-3 rounded cursor-pointer hover:text-primarydark hover:bg-white hover:shadow-sm shadow-gray-200 hover:transition-shadow duration-1500'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 py-1">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21 12a2.25 2.25 0 00-2.25-2.25H15a3 3 0 11-6 0H5.25A2.25 2.25 0 003 12m18 0v6a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 18v-6m18 0V9M3 12V9m18 0a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 9m18 0V6a2.25 2.25 0 00-2.25-2.25H5.25A2.25 2.25 0 003 6v3" />
                 </svg>
-                <div>Wallet</div>
+                <div>Tickets</div>
             </div >
             </Link>
 
@@ -183,8 +183,8 @@ export default function Header() {
                   Create Event
                 </Link>
                 
-                <Link className="flex hover:bg-background hover:shadow py-2 pl-6 pr-8 rounded-lg" to={'/wallet'}>
-                  <div>Wallet</div>
+                <Link className="flex hover:bg-background hover:shadow py-2 pl-6 pr-8 rounded-lg" to={'/tickets'}>
+                  <div>tickets</div>
                 </Link>
                 
                 <Link className="flex hover:bg-background hover:shadow py-2 pl-6 pr-8 rounded-lg" to={'/verification'}>

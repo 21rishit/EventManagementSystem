@@ -112,7 +112,7 @@ export default function PaymentSummary() {
       }
     };
 //!posting the details to backend ----------------------------
-    const response = await axios.post(`/tickets`, updatedTicketDetails);
+    const response = await axios.post(`/tickets/tickets`, updatedTicketDetails);
     alert("Ticket Created");
     setRedirect(true)
     console.log('Success creating ticket', updatedTicketDetails)
@@ -134,7 +134,7 @@ async function generateQRCode(name, eventName) {
   }
 }
 if (redirect){
-  return <Navigate to={'/wallet'} />
+  return <Navigate to={'/tickets'} />
 }
     return (
       <>
@@ -251,8 +251,6 @@ if (redirect){
               <button type="button" 
                 onClick = {createTicket}
                 className="primary">
-                
-               
                 Make Payment</button>
               </Link>
             </div>
